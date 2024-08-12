@@ -38,13 +38,14 @@ function showToDos(toDos) {
 
   toDos.forEach((task) => {
     toDoContainer.innerHTML += `
-        <div class="single-task bg-slate-100 rounded p-2 flex gap-4">
-            <div class="task-left flex content-center align-center">
-                <input type="checkbox" />
-            </div>
-            <div class="task-right">
+        <div class="single-task bg-slate-100 rounded py-3 px-4 flex gap-4">
+            <div class="task-left w-4/5">
                 <h2 class="text-xl text-bold">${task.name}</h2>
                 <p>${task.category}</p>
+            </div>
+            <div class="task-right w-1/6 flex justify-center align-center">
+                <input type="checkbox" class="rounded-full" />
+                <label for="checkbox" class="w-10 h-10 bg-slate-500"></label>
             </div>
         </div>
         `;
@@ -53,7 +54,6 @@ function showToDos(toDos) {
 
 // To Do Filter
 let filteredToDos = [];
-
 for (let filter of toDoFilter) {
   let currentFilter = filter.textContent;
 
@@ -105,4 +105,21 @@ newTaskButton.addEventListener("click", () => {
   addNewTask();
 });
 
+// Begrüßung nach Tageszeit
+function greetings() {
+  const currentTime = new Date();
+  let message;
+
+  if (currentTime < 12) {
+    message = "Guten Morgen, Kevin";
+  } else if (currentTime < 18) {
+    message = "Guten Tag, Kevin";
+  } else {
+    message = "Guten Abend, Kevin";
+  }
+
+  document.querySelector(".greetings").textContent = message;
+}
+
+greetings();
 showToDos(toDos);

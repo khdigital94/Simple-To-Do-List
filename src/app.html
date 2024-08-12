@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="app.css" />
   </head>
   <body class="bg-emerald-500 p-6 h-fit">
-    <h1 class="text-white text-bold text-4xl">To-Do's</h1>
+    <h1 class="greetings text-white text-bold text-4xl"></h1>
+    <p class="text-white">Du hast folgende Dinge zu erledigen:</p>
     <ul class="flex gap-2 mt-6">
       <li class="to-do-filter bg-emerald-900 hover:bg-emerald-800 ease-in-out duration-300 text-white text-xs px-4 py-2 rounded cursor-pointer">Alle</li>
       <li class="to-do-filter bg-emerald-900 hover:bg-emerald-800 ease-in-out duration-300 text-white text-xs px-4 py-2 rounded cursor-pointer">Offen</li>
       <li class="to-do-filter bg-emerald-900 hover:bg-emerald-800 ease-in-out duration-300 text-white text-xs px-4 py-2 rounded cursor-pointer">Abgeschlossen</li>
     </ul>
-    <div class="task-container mt-6 flex flex-col gap-2"></div>
-    <button class="popup-button bg-slate-800 hover:bg-slate-900 ease-in-out duration-300 text-white w-full py-4 rounded mt-2 m-auto">+ Add New Task</button>
+    <div class="task-container mt-4 flex flex-col gap-2"></div>
+    <button class="popup-button bg-slate-800 hover:bg-slate-900 ease-in-out duration-300 text-white w-full py-4 rounded mt-4 m-auto">+ Add New Task</button>
     <div class="popup ease-in-out duration-300 hidden">
       <div class="popup-overlay w-full h-full bg-slate-800 fixed top-0 left-0 opacity-90"></div>
       <form class="bg-slate-100 p-8 w-4/5 fixed top-0 left-0 bottom-0 right-0 m-auto h-max rounded flex flex-col gap-2">
